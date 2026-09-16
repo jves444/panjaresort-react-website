@@ -271,3 +271,27 @@ export const NEARBY = [
   { name: 'Cowrie Island', distance: '10 min by car', icon: '🏝️' },
   { name: 'Puerto Princesa City Center', distance: 'Shuttle available', icon: '🏙️' },
 ];
+
+// ─── BLOG POSTS ──────────────────────────────────────
+export const BLOG_POSTS = [
+  {
+    id: 'honda-bay-guide',
+    date: 'September 10, 2026',
+    category: 'Things To Do',
+    title: 'Your Complete Guide to Honda Bay Island Hopping',
+    excerpt: 'Cowrie, Luli, Starfish — which islands are worth it and what to bring. Our staff picks after years of sending guests out.',
+    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&q=80',
+    content: `Full article text here. Can be long — supports multiple paragraphs.
+
+Second paragraph goes here.`,
+  },
+  {
+    id: 'palawan-food',
+    date: 'August 28, 2026',
+    category: 'Dining',
+    title: 'What to Eat in Puerto Princesa (And What We Serve at Panja)',
+    excerpt: 'Tamilok, crocodile sisig, fresh kinilaw — Palawan has a food scene most visitors miss entirely.',
+    image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=900&q=80',
+    content: `Article content here.`,
+  },
+];

@@ -8,6 +8,7 @@ import AmenitiesSection from './pages/AmenitiesSection';
 import ReviewsSection from './pages/ReviewsSection';
 import LocationSection from './pages/LocationSection';
 import Footer from './components/Footer';
+import BlogSection from './pages/BlogSection';
 
 export default function App() {
   const [bookingOpen, setBookingOpen] = useState(false);
@@ -20,6 +21,7 @@ export default function App() {
 
   const closeBooking = () => setBookingOpen(false);
 
+  
   return (
     <>
       <Navbar onBookNow={() => openBooking()} />
@@ -31,6 +33,7 @@ export default function App() {
         <AmenitiesSection />
         <ReviewsSection />
         <LocationSection />
+        <BlogSection />
       </main>
 
       <Footer onBookNow={() => openBooking()} />
@@ -41,5 +44,7 @@ export default function App() {
         preselectedRoom={preselectedRoom}
       />
     </>
+
+
   );
 }
