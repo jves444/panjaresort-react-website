@@ -1,0 +1,165 @@
+/* ── SECTION BASE ───────────────────────────── */
+.section {
+  padding: var(--section-pad);
+}
+.section--tinted { background: var(--g-50); }
+.section--dark { background: var(--g-800); }
+
+.section__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ── ROOMS GRID ─────────────────────────────── */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ── FOOD GRID ──────────────────────────────── */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ── AMENITIES GRID ─────────────────────────── */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.amenity-card {
+  background: rgba(255,255,255,0.06);
+  padding: 32px 26px;
+  transition: background 0.2s;
+}
+.amenity-card:hover { background: rgba(255,255,255,0.1); }
+
+.amenity-card__icon { font-size: 30px; margin-bottom: 14px; }
+.amenity-card__name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--g-200);
+  margin-bottom: 8px;
+}
+.amenity-card__desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.65; }
+
+/* ── REVIEWS ────────────────────────────────── */
+.reviews-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.reviews-header .sh { margin-bottom: 0; }
+
+.reviews-rating {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.reviews-rating__big {
+  font-family: var(--serif);
+  font-size: 68px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--g-700);
+}
+.reviews-rating__stars { color: #f5c842; font-size: 20px; letter-spacing: 2px; }
+.reviews-rating__count { font-size: 14px; color: var(--mid); margin-top: 2px; }
+.reviews-rating__sources { font-size: 12px; color: var(--g-500); margin-top: 2px; }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.review-card {
+  background: var(--g-50);
+  border-radius: 10px;
+  padding: 24px;
+  border-left: 3px solid var(--g-300);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.review-card__stars { color: #f5c842; font-size: 14px; letter-spacing: 2px; }
+.review-card__text {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--ink);
+  font-style: italic;
+  flex: 1;
+}
+.review-card__meta { display: flex; flex-direction: column; gap: 2px; }
+.review-card__meta strong { font-size: 13px; font-weight: 600; color: var(--g-800); }
+.review-card__meta span { font-size: 12px; color: var(--mid); }
+
+/* ── LOCATION ───────────────────────────────── */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.location-map {
+  height: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--light);
+}
+
+.location-info { display: flex; flex-direction: column; gap: 28px; }
+
+.location-details { display: flex; flex-direction: column; gap: 16px; }
+.location-detail { display: flex; gap: 14px; align-items: flex-start; }
+.location-detail__icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.location-detail strong { font-size: 13px; font-weight: 600; color: var(--g-700); display: block; margin-bottom: 3px; }
+.location-detail p { font-size: 14px; color: var(--mid); }
+.location-detail a { color: var(--g-600); }
+
+.nearby-list { display: flex; flex-direction: column; gap: 2px; }
+.nearby-list__title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--g-600);
+  margin-bottom: 10px;
+}
+.nearby-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid var(--light);
+}
+.nearby-item__icon { font-size: 18px; flex-shrink: 0; }
+.nearby-item__name { font-size: 14px; flex: 1; color: var(--ink); }
+.nearby-item__dist { font-size: 12px; color: var(--g-500); font-weight: 500; }
+
+/* ── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 1000px) {
+  .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .location-grid { grid-template-columns: 1fr; }
+  .location-map { height: 300px; }
+}
+
+@media (max-width: 640px) {
+  .rooms-grid,
+  .food-grid { grid-template-columns: 1fr; }
+  .amenities-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .reviews-header { flex-direction: column; }
+}

@@ -1,0 +1,112 @@
+.footer { background: var(--g-900); color: rgba(255,255,255,0.7); }
+
+/* CTA Band */
+.footer__cta-band {
+  background: var(--g-700);
+  padding: 40px clamp(20px,5vw,80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer__cta-title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.footer__cta-sub { font-size: 14px; color: var(--g-200); }
+
+/* Main grid */
+.footer__main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding: 56px clamp(20px,5vw,80px);
+}
+
+.footer__logo {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: #fff;
+  line-height: 1;
+}
+.footer__logo-sub {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--g-300);
+  margin-bottom: 16px;
+  margin-top: 3px;
+}
+.footer__tagline {
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.45);
+  max-width: 260px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.footer__socials {
+  display: flex;
+  gap: 12px;
+}
+.footer__socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.65);
+  transition: background 0.2s, color 0.2s;
+}
+.footer__socials a:hover {
+  background: var(--g-600);
+  color: #fff;
+}
+
+.footer__col h4 {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.35);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer__col a,
+.footer__col button {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  font-family: var(--sans);
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color 0.18s;
+}
+.footer__col a:hover,
+.footer__col button:hover { color: var(--g-300); }
+
+/* Bottom bar */
+.footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 20px clamp(20px,5vw,80px);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 860px) {
+  .footer__main { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer__brand { grid-column: 1 / -1; }
+}
+@media (max-width: 500px) {
+  .footer__main { grid-template-columns: 1fr; }
+  .footer__cta-band { flex-direction: column; align-items: flex-start; }
+}

@@ -1,0 +1,121 @@
+.hero {
+  position: relative;
+  height: 100dvh;
+  min-height: 580px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85')
+    center / cover no-repeat;
+  transform: scale(1.03);
+  transition: transform 8s ease;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom,
+      rgba(13,43,24,0.3) 0%,
+      rgba(13,43,24,0.15) 40%,
+      rgba(13,43,24,0.72) 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(20px, 5vw, 80px) clamp(64px, 10vh, 100px);
+  max-width: 760px;
+}
+
+.hero__location {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--g-300);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.hero__title {
+  font-family: var(--serif);
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 400;
+  line-height: 1.0;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.hero__sub {
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: rgba(255,255,255,0.78);
+  max-width: 480px;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+.hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.hero__badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.hero__stars { color: #f5c842; }
+
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Scroll hint */
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  right: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.45);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  z-index: 2;
+  animation: heroScrollBob 2.5s ease-in-out infinite;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4));
+}
+
+@keyframes heroScrollBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@media (max-width: 600px) {
+  .hero__scroll-hint { display: none; }
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { text-align: center; }
+}
