@@ -273,7 +273,7 @@ export const NEARBY = [
 ];
 
 // ─── BLOG POSTS ──────────────────────────────────────
-export const BLOG_POSTS = [
+  export const BLOG_POSTS = [
   {
     id: 'honda-bay-guide',
     date: 'September 10, 2026',
@@ -283,7 +283,7 @@ export const BLOG_POSTS = [
     image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&q=80',
     content: `Full article text here. Can be long — supports multiple paragraphs.
 
-Second paragraph goes here.`,
+    Second paragraph goes here.`,
   },
   {
     id: 'palawan-food',

@@ -32,8 +32,9 @@ export default function App() {
         <DiningSection />
         <AmenitiesSection />
         <ReviewsSection />
-        <LocationSection />
         <BlogSection />
+        <LocationSection />
+        
       </main>
 
       <Footer onBookNow={() => openBooking()} />
