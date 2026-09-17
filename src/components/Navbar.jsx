@@ -7,7 +7,9 @@ const NAV_LINKS = [
   { label: 'Dining', href: '#dining' },
   { label: 'Amenities', href: '#amenities' },
   { label: 'Reviews', href: '#reviews' },
+   { label: 'Blog', href: '#blog' },
   { label: 'Location', href: '#location' },
+ 
 ];
 
 export default function Navbar({ onBookNow }) {
